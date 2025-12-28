@@ -25,8 +25,53 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multiple Images Enlarge on Click</title>
+<style>
+  .clickable-image {
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .enlarged {
+    transform: scale(2);
+    z-index: 10;
+    position: relative;
+  }
+</style>
+</head>
+<body>
 
+<img class="clickable-image" src="c:\Users\acer\OneDrive\Pictures\Screenshots\Screenshot 2025-12-17 161827.png" alt="Image 1" />
+<img class="clickable-image" src="c:\Users\acer\OneDrive\Pictures\Screenshots\Screenshot 2025-12-17 161924.png" alt="Image 2" />
+<img class="clickable-image" src="c:\Users\acer\OneDrive\Pictures\Screenshots\Screenshot 2025-12-17 162049.png" alt="Image 3" />
+<img class="clickable-image" src="c:\Users\acer\OneDrive\Pictures\Screenshots\Screenshot 2025-12-17 162236.png" alt="Image 4" />
+
+<script>
+  const images = document.querySelectorAll('.clickable-image');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('enlarged');
+    });
+  });
+</script>
+
+</body>
+</html>
+~~~
 ## OUTPUT:
+<img width="1438" height="762" alt="image" src="https://github.com/user-attachments/assets/89576ca7-c133-4ee5-9a27-fbd2d57494da" />
+<img width="1453" height="766" alt="image" src="https://github.com/user-attachments/assets/4dbc5d2f-964c-4179-b8bf-d40e88956da7" />
+<img width="1445" height="760" alt="image" src="https://github.com/user-attachments/assets/2948d5dc-d92a-44ea-929e-adb0e13a6e8e" />
+
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
